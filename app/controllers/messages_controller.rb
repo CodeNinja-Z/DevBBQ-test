@@ -7,11 +7,12 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new
+    @message = Message.new(message_params)
     if @message.save!
       redirect_to root_path
     else
       render :message
+    end
   end
 
   private
