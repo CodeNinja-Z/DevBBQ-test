@@ -2,7 +2,8 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @messages =  Message.all
+    client = Mysql2::Client.new(:host => "localhost", :username => "root", :database => "DevBBQ_development")
+    @messages = client.query("SELECT * FROM messages WHERE user_id = #{current_user.id}")
     @message = Message.new
   end
 
