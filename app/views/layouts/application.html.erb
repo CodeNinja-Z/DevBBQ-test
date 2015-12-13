@@ -7,15 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!-- Ensure you have flash messages in app/views/layouts/application.html.erb.
-     For example:
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p> -->
-<% flash.each do |name, msg| %>
-    <%= content_tag :section, msg, :id => "flash_#{name}", :class => "flash" %>
-<% end %>
 
-<%= yield %>
+  <% if current_user %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %> | <%= link_to "Reset password",edit_user_password_path %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
+  <!-- Ensure you have flash messages in app/views/layouts/application.html.erb.
+       For example:
+         <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p> -->
+  <% flash.each do |name, msg| %>
+      <%= content_tag :section, msg, :id => "flash_#{name}", :class => "flash" %>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>
