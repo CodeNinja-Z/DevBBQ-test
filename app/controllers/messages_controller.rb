@@ -3,8 +3,9 @@ class MessagesController < ApplicationController
 
   def index
     client = Mysql2::Client.new(:host => "localhost", :username => "root", :database => "DevBBQ_development")
+    # Q: How to avoid SQL injection on the next line?
     @messages = client.query("SELECT * FROM messages WHERE user_id = #{current_user.id}")
-    @message = Message.new
+    @message = current_user.messages.build
   end
 
   def create
