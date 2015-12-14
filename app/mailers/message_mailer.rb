@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-  include SendGrid
+  #include SendGrid
 
   default from: 'carloszhao728@gmail.com',
           subject: 'An email sent via SendGrid with substitutions'
@@ -10,9 +10,9 @@ class MessageMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 
-  def email_with_substitutions
-    substitute '-user_name-', %w(User1 User2)
-    mail to: blacklight728@gmail.com, body: "Hello, -user_name-!"
-  end
+  # def email_with_substitutions
+  #   substitute '-user_name-', %w(User1 User2)
+  #   mail to: blacklight728@gmail.com, body: "Hello, -user_name-!"
+  # end
 
 end

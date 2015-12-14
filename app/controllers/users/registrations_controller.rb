@@ -10,7 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    MessageMailer.welcome_email(resource).deliver unless resource.invalid?
+    MessageMailer.welcome_email(resource).deliver_now unless resource.invalid?
   end
 
   # GET /resource/edit
