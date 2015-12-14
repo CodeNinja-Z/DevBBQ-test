@@ -1,5 +1,8 @@
 <h1>Messages#index</h1>
+
 <%= render "message" %>
+
+<h2>View All Messages Sent</h2>
 <% @messages.each do |m| %>
   <ul>
     <li><%= m["title"] %></li>

@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'rails_admin'
 
+gem 'sendgrid-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
