@@ -1,5 +1,10 @@
 <h1>Send A Message To DevBBQ</h1>
 
-<%= render "newmessage" %>
+<div id="new-message">
+  <%= render "new_message" %>
+</div>
 
-<%= render "messages/messages" %>
+<h2>View All Messages Sent</h2>
+<div id="messages">
+  <%= render @messages %>
+</div>
