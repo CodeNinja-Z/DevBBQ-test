@@ -1,11 +1,5 @@
-<h1>Messages#index</h1>
+<h1>Send A Message To DevBBQ</h1>
 
-<%= render "message" %>
+<%= render "newmessage" %>
 
-<h2>View All Messages Sent</h2>
-<% @messages.each do |m| %>
-  <ul>
-    <li><%= m["title"] %></li>
-    <li><%= m["content"] %></li>
-  </ul>
-<% end %>
+<%= render "messages/messages" %>

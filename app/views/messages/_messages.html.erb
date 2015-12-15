@@ -1,0 +1,9 @@
+<h2>View All Messages Sent</h2>
+<div class="messages">
+  <% @messages.each do |m| %>
+    <ul>
+      <li><%= m["title"] %></li>
+      <li><%= m["content"] %></li>
+    </ul>
+  <% end %>
+</div>

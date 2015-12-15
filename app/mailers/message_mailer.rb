@@ -1,6 +1,6 @@
 class MessageMailer < ApplicationMailer
   default from: 'carloszhao728@gmail.com',
-          subject: 'An email sent via SendGrid' # default subject
+          subject: 'Testing email sent via SendGrid' # default subject
  
   def welcome_email(user)
     @user = user
