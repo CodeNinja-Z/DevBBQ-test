@@ -42,20 +42,17 @@ Rails.application.configure do
   # Production host
   # config.action_mailer.default_url_options = { host: 'myapp.herokuapp.com' }  
 
+  config.action_mailer.raise_delivery_errors = true  # False: Don't care if the mailer can't send.
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true  # False: Don't care if the mailer can't send.
   # config.action_mailer.default :charset => "utf-8"  
   # config.action_mailer.smtp_settings = {
   #   address: "smtp-relay.gmail.com",
   #   port: 587,
   #   domain: "gmail.com",
-  #   # https://devbbq-test.herokuapp.com/
   #   authentication: :login,
   #   enable_starttls_auto: true,
-  #   # user_name: ENV['GMAIL_USERNAME'],
-  #   # password: ENV['GMAIL_PASSWORD']
-  #   user_name: 'carloszhao728@gmail.com',
-  #   password: 'Nirvana890728Z'
+  #   user_name: ENV['GMAIL_USERNAME'],
+  #   password: ENV['GMAIL_PASSWORD']
   # }
 end

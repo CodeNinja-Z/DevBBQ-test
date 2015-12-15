@@ -2,11 +2,11 @@ ActionMailer::Base.register_interceptor(SendGrid::MailInterceptor)
 
 ActionMailer::Base.smtp_settings = {
   :address => 'smtp.sendgrid.net',
-  :port => '25',
+  :port => '2525',
   :domain => 'example.com',
   :authentication => :plain,
   :user_name => 'CarlosZhao',
-  :password => 'z19890728'
+  :password => 'woshixiaozhi890728'
 }
 
 # For using Heroku:
