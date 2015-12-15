@@ -18,7 +18,7 @@ if ENV['SENDGRID_USERNAME'] && ENV['SENDGRID_PASSWORD']
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com',
+    :domain         => 'devbbq-test.herokuapp.com',
     :enable_starttls_auto => true,
     :ssl => true
   }

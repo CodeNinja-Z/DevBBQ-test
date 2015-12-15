@@ -8,4 +8,10 @@ class MessageMailer < ApplicationMailer
     @url  = 'https://devbbq-test.herokuapp.com'
     mail(to: @user.email, subject: 'An email sent via SendGrid')
   end
+
+  def devbbq_email(subject, body)
+    @subject = subject
+    @body = body
+    mail(to: 'blacklight728@gmail.com', subject: @subject)
+  end
 end
