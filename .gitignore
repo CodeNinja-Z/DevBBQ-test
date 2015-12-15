@@ -16,5 +16,5 @@
 !/log/.keep
 /tmp
 
-# Ignore the secret keys.
+# Ignore application configuration
 /config/application.yml
