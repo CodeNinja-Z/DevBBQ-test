@@ -9,14 +9,19 @@
 </head>
 <body>
 
-  <% if current_user %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %> | <%= link_to "Edit Account", edit_user_registration_path %>
-  <% else %>
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
-
-<!--  <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> -->
+  <nav class="navbar navbar-default">
+<!--     <div class="trade-mark">
+      <h2>Message</h2>
+    </div> -->
+    <% if current_user %>
+      <ul class="nav nav-pills">
+        <li role="presentation"><%= link_to "Edit Account", edit_user_registration_path %></li>
+        <li role="presentation"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      </ul>
+    <% else %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+  </nav>
 
   <%= yield %>
 
