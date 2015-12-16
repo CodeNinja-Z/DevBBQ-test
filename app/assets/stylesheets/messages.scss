@@ -40,8 +40,19 @@
   }
 }
 
+@media (max-width: 480px) {
+  #new-message{
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px){
+  #new-message{
+    width: 50%;
+  }
+}
+
 #new-message{
-  width: 400px;
   margin: 10px auto 30px;
   .form-group{
     margin-bottom: 7.5px;
