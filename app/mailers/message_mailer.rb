@@ -12,6 +12,6 @@ class MessageMailer < ApplicationMailer
   def devbbq_email(subject, body)
     @subject = subject
     @body = body
-    mail(to: 'carloszhao728@gmail.com', subject: @subject)
+    mail(to: 'careers@devbbq.com', subject: @subject)
   end
 end
