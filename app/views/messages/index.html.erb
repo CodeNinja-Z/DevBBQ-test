@@ -4,6 +4,12 @@
   <%= render "new_message" %>
 </div>
 
+<div id="graph">
+  <%# column_chart Message.group_by_hour_of_day(:created_at, format: "%l %P").count %>
+  <%# column_chart Message.group_by_day(:created_at).count %>
+  <%= column_chart Message.group_by_period(:day, :created_at).count %>
+</div>
+
 <h2>View All Messages Sent</h2>
 <div id="messages">
   <%= render @messages %>
