@@ -6,7 +6,9 @@
   <%= render "flash" %>
 </div> 
 
-<h1>Send A Message To DevBBQ</h1>
+<div id="new-message-banner">
+  <h3>Send A Message To DevBBQ</h3>
+</div>
 
 <div id="new-message">
   <%= render "new_message" %>
@@ -18,7 +20,10 @@
   <%= column_chart Message.where(user_id: current_user.id).group_by_period(:day, :created_at).count %>
 </div>
 
-<button id="switch-btn">View/Hide All Messages Sent</button>
+<div id="switch-btn-wrap">
+  <button id="switch-btn">View/Hide All Messages Sent</button>
+</div>
+
 <div id="messages">
   <%= render @messages %>
 </div>

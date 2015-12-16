@@ -26,3 +26,34 @@
     }
   }
 }
+
+#new-message-banner{
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#new-message{
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#switch-btn-wrap{
+  width: 250px;
+  margin: 30px auto 30px;
+  text-align: center;
+}
+
+.submit input[type="submit"], #switch-btn{
+  font-size: 1.2em;
+  border-radius: 5px;
+  background-color: #337ab7;
+  color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+#messages{
+  width: 600px;
+  margin: 0 auto;
+}
