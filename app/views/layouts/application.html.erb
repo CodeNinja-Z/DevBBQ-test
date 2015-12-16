@@ -14,10 +14,9 @@
   <% else %>
     <%= link_to "Login", new_user_session_path %>
   <% end %>
-  <!-- Ensure you have flash messages in app/views/layouts/application.html.erb.
-       For example:
-         <p class="notice"><%= notice %></p>
-         <p class="alert"><%= alert %></p> -->
+
+<!--  <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> -->
   <% flash.each do |name, msg| %>
       <%= content_tag :section, msg, :id => "flash_#{name}", :class => "flash" %>
   <% end %>
