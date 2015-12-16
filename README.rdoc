@@ -1,28 +1,16 @@
-== README
+DevBBQ hiring test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+All requirements:
+• Use latest version of Rails
+• Integrate MySQL + Bootstrap + Responsive UI
+• Set up Devise to
+    • Log in, Log out
+    • Password Reset
+    • Sign up
+• Set up rudimentary UI and Bootstrap menu
+• Once signed into the application …
+    • Click a button that will …
+        • Send an email to careers@devbbq.com through a trial Sendgrid API
+        • Provide a bar chart of how many times the button was clicked on a per-day basis
+• Install RailsAdmin which is only accessible to a single admin user
+• Host on Heroku
