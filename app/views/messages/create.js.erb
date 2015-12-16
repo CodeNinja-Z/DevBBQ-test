@@ -2,4 +2,5 @@ $('#messages').append('<%= j render(@message) %>');
 
 $("#new_message")[0].reset();
 
-$('#flash-message').html("<%= flash[:notice] %>");
+$('.flash-messages').html("<%= j (content_tag :div, flash[:notice], :id => 'flash_#{name}', :class => 'alert alert-success') %>");
+

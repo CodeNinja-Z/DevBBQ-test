@@ -27,16 +27,34 @@
   }
 }
 
+.flash-messages{
+  top: -40px;
+}
+
 #new-message-banner{
   width: 400px;
   margin: 0 auto;
   text-align: center;
+  h3{
+    font-size: 1.4em;
+  }
 }
 
 #new-message{
   width: 400px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 10px auto 30px;
+  .form-group{
+    margin-bottom: 7.5px;
+    label{
+      font-size: 120%;
+    }
+  }
+  #lg-margin{
+    margin-bottom: 12.5px;
+  }
+  .submit{
+    text-align: center;
+  }
 }
 
 #switch-btn-wrap{
@@ -54,6 +72,6 @@
 }
 
 #messages{
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
 }

@@ -26,5 +26,5 @@ if ENV['SENDGRID_USERNAME'] && ENV['SENDGRID_PASSWORD']
 end
 
 SendGrid.configure do |config|
-  config.dummy_recipient = 'blacklight728@gmail.com'
+  # config.dummy_recipient = 'blacklight728@gmail.com'
 end

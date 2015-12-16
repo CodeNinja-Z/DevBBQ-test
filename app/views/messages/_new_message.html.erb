@@ -11,13 +11,13 @@
   <% end %>
 
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
   </div>
-  <div class="area">
+  <div class="form-group" id="lg-margin">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class: "form-control", placeholder: "Content" %>
   </div>
   <div class="submit">
     <%= f.submit "Send Message"%>
