@@ -3,14 +3,13 @@ class MessagesController < ApplicationController
 
   def index
     # For using MySQL on Sinatra, two ways:
-
+    # 1)
     # client = Mysql2::Client.new(:host => "localhost", :username => "root", :database => "DevBBQ_development")
     # @messages = client.query("SELECT * FROM messages WHERE user_id = #{current_user.id}")
-    
-    # or this way
+    # 2)
     # @messages = ActiveRecord::Base.connection.select_all("SELECT * FROM messages WHERE user_id = #{current_user.id}").rows
     
-    # Rails way, as usual like SQLite:
+    # Rails way, as usual like SQLite/PG:
     @messages = Message.where(user_id: current_user.id)
     @message = current_user.messages.build
   end

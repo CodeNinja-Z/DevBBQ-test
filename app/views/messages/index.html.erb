@@ -7,7 +7,7 @@
 <div id="chart">
   <%# column_chart Message.group_by_hour_of_day(:created_at, format: "%l %P").count %>
   <%# column_chart Message.group_by_day(:created_at).count %>
-  <%= column_chart Message.group_by_period(:day, :created_at).count %>
+  <%= column_chart Message.where(user_id: current_user.id).group_by_period(:day, :created_at).count %>
 </div>
 
 <button id="switch-btn">View/Hide All Messages Sent</button>
