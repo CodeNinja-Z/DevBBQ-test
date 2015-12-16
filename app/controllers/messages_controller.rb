@@ -20,6 +20,7 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save!
         MessageMailer.devbbq_email(@message.title, @message.content).deliver_now
+        flash[:notice] = "You have sent an email to DevBBQ successfully!"
       end
       format.html
       format.js
