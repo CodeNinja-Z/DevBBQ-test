@@ -1,11 +1,24 @@
 .navbar{
   background-color: #337ab7;
   .nav{
-    float: right;
     line-height: 48px;
-    li{ 
+    .left{
+      float: left;
+    }
+    .right{
+      float: right;
+    }
+    li{
+      h2{
+        color: white;
+        font-size: 35px;
+        padding-left: 1.7142857143em;
+        margin: 15px 0 15px;
+      } 
       a{
         color: white;
+        font-size: 1.2em;
+        margin-right: 2em;
         &:hover{
           background-color: #a0a0a0;
         }
